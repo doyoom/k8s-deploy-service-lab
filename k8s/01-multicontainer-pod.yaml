@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-a-b
+  labels:
+    app: pod-a-b
+spec:
+  containers:
+    - name: a
+      image: k8s-deploy-service-lab/a:local
+      ports:
+        - containerPort: 5000
+    - name: b
+      image: k8s-deploy-service-lab/b:local
+      ports:
+        - containerPort: 5001
